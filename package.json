@@ -1,0 +1,22 @@
+{
+  "name": "muparser",
+  "version": "0.1.0",
+  "description": "Substitute Text in a string using either glob wildcard matching, or regex matching depending on preference.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "keywords": [
+    "regex",
+    "replacement",
+    "replace",
+    "string"
+  ],
+  "author": "Lemuel Canady, Jr",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {}
+}
