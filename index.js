@@ -1,3 +1,7 @@
+const Manager = require('mumanager');
+
+let manager = new Manager();
+
 /**
  * Handles the regex substitution of strings in an ordered fashion.
  */
@@ -29,4 +33,12 @@ class Parser {
   }
 }
 
-module.exports = Parser;
+module.exports = (name) => {
+  if(!manager.list.has(name)) {
+    parser = new Parser();
+    manager.register(name, parser);
+    return parser;
+  } else {
+    return manager.get(name);
+  }
+}

@@ -18,5 +18,7 @@
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mumanager": "github:lcanady/mumanager"
+  }
 }

@@ -1,13 +1,12 @@
 # MuParser
-A simple regex powered text parser.
+A simple regex powered text parser system. When required in didfferent parts of your code, it retains a list of parsers created.
 ```JavaScript
-Parser = require('muparser');
-parser = new Parser()
+parsers = require('muparser');
 
-// Examples. 
+// create a new parser and add an ANSI terminal escape code substitution.
+parser('color').addRule(/%[CcXx]b/, '\u001b[34m');
 
-// ANSI terminal escape code substitution.
-parser.addRule(/%[CcXx]b/, '\u001b[34m');
-
-parser.parse('%cbThis text will be blue!');
+//later in another module...
+parsers = require('muparser');
+parser('color').parse('%cbThis text will be blue!');
 ```
