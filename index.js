@@ -1,7 +1,7 @@
 /**
  * Handles the regex substitution of strings in an ordered fashion.
  */
-class TextParser {
+class Parser {
   constructor (){
     this.rules = new Map();
   }
@@ -29,4 +29,4 @@ class TextParser {
   }
 }
 
-module.exports.TextSub = TextSub;
+module.exports.Parser = Parser;
