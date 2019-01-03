@@ -33,7 +33,16 @@ class Parser {
   }
 }
 
-// Hook the parser up to the manager system.
+/**
+ * @module parsers
+ */
+
+/**
+ * Grabs or creates a new Parser object.
+ * @param {string} name The unique name for a parser.
+ * @param {object=} options The container object for individual parser
+ * settings.
+ */
 module.exports = function (name, options={}) {
   if(!manager.has(name)) {
     const parser = new Parser(options);
