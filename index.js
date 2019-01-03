@@ -1,4 +1,4 @@
-const Manager = require('mumanager');
+const Manager = require('mu-manager');
 
 let manager = new Manager();
 
@@ -33,9 +33,10 @@ class Parser {
   }
 }
 
-module.exports = (name) => {
-  if(!manager.list.has(name)) {
-    parser = new Parser();
+// Hook the parser up to the manager system.
+module.exports = function (name, options={}) {
+  if(!manager.has(name)) {
+    const parser = new Parser(options);
     manager.register(name, parser);
     return parser;
   } else {

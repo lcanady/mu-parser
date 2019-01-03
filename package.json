@@ -1,5 +1,5 @@
 {
-  "name": "muparser",
+  "name": "mu-parser",
   "version": "0.3.1",
   "description": "Substitute Text in a string using either glob wildcard matching, or regex matching depending on preference.",
   "main": "index.js",
@@ -19,6 +19,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "mumanager": "github:lcanady/mumanager"
+    "mu-manager": "github:lcanady/mu-manager"
   }
 }
