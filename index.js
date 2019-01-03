@@ -39,7 +39,7 @@ class Parser {
 }
 
 /**
- * @module parsers
+ * @module parser
  */
 
 /**
@@ -48,7 +48,7 @@ class Parser {
  * @param {object=} options The container object for individual parser
  * settings.
  * 
- * @returns {Parser}
+ * @returns {Parser} A Parser object.
  */
 module.exports = function (name, options={}) {
   if(!manager.has(name)) {
