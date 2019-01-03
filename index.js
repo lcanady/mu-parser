@@ -14,6 +14,8 @@ class Parser {
    * Adds RegExp rule to the substitutions system.
    * @param {Rexexp} pattern The RegExp pattern to match the string agasint.
    * @param {Function} action The expression to run if a match is made. 
+   * 
+   * @return {Parser} 
    */
   addRule(pattern, action) {
     this.rules.set(pattern, action);
@@ -21,9 +23,12 @@ class Parser {
   }
 
   /**
-   * Run the TextSub rules against a string of text.  The rules will run in the
-   * order that they are defined.
+   * Run the Parser rules against a string of text.  The rules will run in
+   * the order that they are defined.
    * @param {string} string The text string to be parsed.
+   * 
+   * @return {string} The string returned with all of the parser rules applied
+   * to it.
    */
   parse(string) {
     for(const [key, value] of this.rules) {
