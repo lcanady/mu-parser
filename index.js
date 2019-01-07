@@ -25,26 +25,16 @@ class Parser {
   /**
    * Run the Parser rules against a string of text.  The rules will run in
    * the order that they are defined.
-   * @param {string} string The text string to be parsed.
+   * @param {string} text The text string to be parsed.
    * 
    * @return {string} The string returned with all of the parser rules applied
    * to it.
    */
   parse(text) {
     for(const [key, value] of this.rules) {
-      let data = new ParserData(text);
-      (data) => {
-        text = text.replace(key, value);
-      }
+      text = text.replace(key, value);
     }
-    return data;
-  }
-}
-
-class ParserData {
-  constructor(text='') {
-    this.text = text;
-    this.headers = [];
+    return text;
   }
 }
 
