@@ -30,9 +30,9 @@ class Parser {
    * @return {string} The string returned with all of the parser rules applied
    * to it.
    */
-  parse(string) {
+ async parse(string) {
     for(const [key, value] of this.rules) {
-      string = string.replace(key, value);
+      string = await string.replace(key, value);
     }
     return string;
   }
