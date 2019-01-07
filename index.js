@@ -25,7 +25,7 @@ class Parser {
   /**
    * Run the Parser rules against a string of text.  The rules will run in
    * the order that they are defined.
-   * @param {string} string The text string to be parsed.
+   * @param {string} text The text string to be parsed.
    * 
    * @return {string} The string returned with all of the parser rules applied
    * to it.
@@ -34,7 +34,7 @@ class Parser {
     for(const [key, value] of this.rules) {
       string = await string.replace(key, value);
     }
-    return string;
+    return text;
   }
 }
 
