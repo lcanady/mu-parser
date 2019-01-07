@@ -30,11 +30,21 @@ class Parser {
    * @return {string} The string returned with all of the parser rules applied
    * to it.
    */
-  parse(string) {
+  parse(text) {
     for(const [key, value] of this.rules) {
-      string = string.replace(key, value);
+      let data = new ParserData(text);
+      (data) => {
+        text = text.replace(key, value);
+      }
     }
-    return string;
+    return data;
+  }
+}
+
+class ParserData {
+  constructor(text='') {
+    this.text = text;
+    this.headers = [];
   }
 }
 
