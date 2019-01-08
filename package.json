@@ -1,6 +1,6 @@
 {
   "name": "mu-parser",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Substitute Text in a string using either glob wildcard matching, or regex matching depending on preference.",
   "main": "index.js",
   "scripts": {
