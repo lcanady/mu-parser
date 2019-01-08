@@ -34,7 +34,7 @@ class Parser {
     for(const [key, value] of this.rules) {
       string = await string.replace(key, value);
     }
-    return text;
+    return string;
   }
 }
 
