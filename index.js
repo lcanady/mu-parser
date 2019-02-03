@@ -1,4 +1,5 @@
 const Manager = require('mu-manager');
+const stringReplaceAsync = require('string-replace-async')
 
 let manager = new Manager();
 
@@ -32,7 +33,7 @@ class Parser {
    */
  async parse(string) {
     for(const [key, value] of this.rules) {
-      string = await string.replace(key, value);
+      string = await stringReplaceAsync(string, key, value)
     }
     return string;
   }

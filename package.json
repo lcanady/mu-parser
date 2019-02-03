@@ -19,6 +19,7 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "mu-manager": "github:lcanady/mu-manager"
+    "mu-manager": "^0.2.1",
+    "string-replace-async": "^1.2.1"
   }
 }
